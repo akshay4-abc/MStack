@@ -10,6 +10,7 @@
         font-family: serif;
         background-color: Bisque;
         margin: 20px;
+        overflow:auto;
     }
 
     h2{
@@ -18,12 +19,13 @@
     }
 
     .nbox{
-        width: 70%;
+        width: 60%;
+        height: 30%;
         margin: 20px auto;
         background-color: yellowgreen;
         border: 2px solid maroon;
         padding: 40px 20px;
-        overflow: auto;
+        overflow: scroll;
         position: relative;
     }
 
@@ -33,10 +35,20 @@
         float: left;
         margin-right: 15px;
     }
-
+    .badge{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: crimson;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
     .clear{
         clear: both;
     }
+
 </style>
 </head>
 
@@ -45,11 +57,13 @@
 <h2>Important Notice</h2>
 
 <div class="nbox">
+    <span class="badge">(0_0)</span>
 
     <img src="https://i.pinimg.com/736x/e8/55/02/e855028732987404105b5f3bb9ccc72f.jpg" alt="School">
 
     <p>
         A clean school creates a healthy, safe, and pleasant environment for everyone. Please use the dustbins provided, avoid littering, and help keep the classrooms, corridors, and school compound neat. Let us all take responsibility for maintaining the cleanliness of our school and set a good example for others. Remember, a clean school is a happy school!
+        A clean school is the foundation of a healthy and positive learning environment. Every student, teacher, and staff member has a shared responsibility to keep our school compound neat and beautiful. Always use the dustbins provided and never throw paper, plastic, food wrappers, or other waste on the ground. Keep the classrooms, corridors, playground, gardens, and surrounding areas clean at all times. Respect the efforts of the housekeeping staff by maintaining cleanliness wherever you go. Avoid writing on walls, desks, or school property, and help protect the plants and trees around the campus. Clean surroundings help prevent diseases, reduce pollution, and create a pleasant atmosphere for learning and recreation. By practicing good habits every day, we can inspire others to do the same and make our school a place we are all proud of. Let us work together to build a cleaner, greener, and healthier campus for ourselves and future generations.Remember that even a small act, such as picking up a piece of litter or placing waste in the correct bin, makes a big difference.<br>
     </p>
 
     <div class="clear"></div>
