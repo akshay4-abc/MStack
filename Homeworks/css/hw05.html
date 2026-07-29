@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlogPost</title>
+
+<style>
+
+    body{
+        background-color:bisque;
+        padding:30px;
+    }
+
+    .blog{
+        width:50%;
+        margin:70px auto;
+        background:white;
+        padding:25px;
+        border:2px solid black;
+        border-radius:8px;
+    }
+
+    h2{
+        text-align:center;
+        margin-bottom:10px;
+    }
+
+    .author{
+        text-align:center;
+        color:darkolivegreen;
+        margin-bottom:20px;
+    }
+
+    p::first-line{
+        font-weight:bold;
+    }
+
+    p::first-letter{
+        font-size:larger;
+        color:red;
+    }
+
+    blockquote{
+        margin:20px 0;
+        padding:10px;
+        background:whitesmoke;
+        border-left:5px solid blue;
+        font-style:italic;
+    }
+
+    blockquote::before{
+        content:"“";
+        color:red;
+    }
+
+    a:link{
+        color:blue;
+        text-decoration:none;
+    }
+
+    a:visited{
+        color:purple;
+    }
+
+    a:hover{
+        text-decoration:underline;
+        color:green;
+    }
+
+    .headings h4{
+        display:inline-block;
+        margin-right:30px;
+        padding:10px;
+        border:1px solid black;
+    }
+
+    .headings h4 + h4{
+        color:white;
+        background:green;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="blog">
+
+    <h2>Technology in Everyday Life</h2>
+
+    <p class="author">By Lijith Lal</p>
+
+    <p>
+        Technology has become an essential part of modern life, making communication,
+        education, and work more efficient than ever before. People use smartphones,
+        computers, and the internet every day to stay connected and access information.
+        While technology offers many benefits, it should always be used responsibly to
+        maintain a healthy balance between the digital and real world.
+    </p>
+
+    <blockquote>
+        Technology is best when it brings people together.
+    </blockquote>
+
+    <p>
+        Read more at
+        <a href="https://www.timesofindia.com" target="_blank">TOI</a> |
+        <a href="https://www.cnn.com" target="_blank">CNN</a>
+    </p>
+
+    <br>
+
+    <div class="headings">
+        <h4>Latest</h4>
+        <h4>Popular</h4>
+    </div>
+
+</div>
+
+</body>
+</html>
