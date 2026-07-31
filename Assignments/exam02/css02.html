@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MachineTest</title>
+    <style>
+        body{
+            display:flex;
+            margin:0px;
+            padding:0px;
+            height:100vh;
+        }
+        .side{
+            width:50%;
+            height:100vh;
+            background-repeat: no-repeat;
+            background-image: url("piece.jpeg");
+            background-size:cover;
+            background-position:center;
+        }
+        .forms{
+            display:flex;
+            width:50%;
+            background-color:white;
+            justify-content:left;
+            padding-top:140px;
+            height:100vh;
+            box-sizing:border-box;
+        }
+        h2{
+            color:#b66b5a;
+            Font-family:arial, helvetica,sans-serif;
+            font-size:28px;
+            margin-top:0;
+            margin-bottom:20px;
+        }
+        .textbox{
+            width:100%;
+            max-width:800px;
+            background-color:white;
+            padding:25px;
+            box-sizing:border-box;
+        }   
+        input[type="email"]{
+            width:100%;
+            height:38px;
+            padding:6px 10px;
+            box-sizing:border-box;
+        }
+        input[type="password"]{
+            width:100%;
+            height:38px;
+            padding:6px 10px;
+            box-sizing:border-box;
+        }
+        input[type="submit"]{
+            color:white;
+            width:100%;
+            height:42px;
+            font-weight:bolder;
+            letter-spacing:2px;
+            font-family:arial,helvetica,sans-serif;
+            background-color:#b66b5a;
+            box-sizing:border-box;
+            border:none;
+        }
+        @media only screen and (max-width:600px)
+        {
+            .side{
+                display:none;
+            }
+            .forms{
+                width:100%;
+                display:flex;
+                justify-content:center;
+                padding:20px;
+                height:100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="side"></div>
+    <div class="forms">
+        <div class="textbox">
+            <h2>Login Form</h2>
+            <form>
+                <label style="font-size:larger; margin-top:5px;" for="email"><b>Email:</b></label><br>
+                <input type="email" id="Email" name="Email" style="margin-top:5px;" required><br>
+                <label style="font-size: larger; margin-top: 7px;" for="Password"><b>Password:</b></label><br>
+                <input type="password" id="Password" name="Password" style="margin-top:4px;" required><br>
+                <input type="checkbox" id="Check" name="Check" style="margin-top:6px;">
+                <label for="Check" style="margin-top:6px;">Remember me</label><br>
+                <input type="submit" value="Login" required>
+            </form>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

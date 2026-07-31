@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <style>
+        body{
+            background-color:bisque;
+        }
+        .outer{
+            width:70%;
+            height: 500px;
+            margin:30px auto;
+            border: 2px solid maroon;
+            padding: 40px 20px;
+            background-color:white;
+            display:flex;
+            justify-content:center;   
+            align-items:center;       
+             
+        }
+        .box1{
+            display:inline-block;
+            width:40%;
+            height:350px;
+            border:2px solid hotpink;
+            padding: 10px 10px;
+            background-color:hotpink;
+
+        }
+        .box2{
+            display:inline-block;
+            width:40%;
+            height:350px;
+            border:2px solid gold;
+            padding: 10px 10px;
+            background-color:gold;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Boxes in a box</h2>
+    <div class="outer">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
