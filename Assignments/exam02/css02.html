@@ -14,10 +14,8 @@
         .side{
             width:50%;
             height:100vh;
-            background-repeat: no-repeat;
-            background-image: url("piece.jpeg");
-            background-size:cover;
-            background-position:center;
+            background-image: linear-gradient(to bottom,#8f9cc6 0%,#bdafbe 55%,#f5c293 100%);
+          
         }
         .forms{
             display:flex;
@@ -31,9 +29,9 @@
         h2{
             color:#b66b5a;
             Font-family:arial, helvetica,sans-serif;
-            font-size:28px;
+            font-size:40px;
             margin-top:0;
-            margin-bottom:20px;
+            margin-bottom:30px;
         }
         .textbox{
             width:100%;
@@ -61,7 +59,7 @@
             font-weight:bolder;
             letter-spacing:2px;
             font-family:arial,helvetica,sans-serif;
-            background-color:#b66b5a;
+            background-color:#bd6c5a;
             box-sizing:border-box;
             border:none;
         }
@@ -86,13 +84,13 @@
         <div class="textbox">
             <h2>Login Form</h2>
             <form>
-                <label style="font-size:larger; margin-top:5px;" for="email"><b>Email:</b></label><br>
-                <input type="email" id="Email" name="Email" style="margin-top:5px;" required><br>
-                <label style="font-size: larger; margin-top: 7px;" for="Password"><b>Password:</b></label><br>
-                <input type="password" id="Password" name="Password" style="margin-top:4px;" required><br>
-                <input type="checkbox" id="Check" name="Check" style="margin-top:6px;">
-                <label for="Check" style="margin-top:6px;">Remember me</label><br>
-                <input type="submit" value="Login" required>
+                <label style="font-size:larger; margin-top:5px; font-family: sans-serif;" for="email"><b>Email:</b></label><br>
+                <input type="email" id="Email" name="Email" style="margin-top:5px; margin-bottom:20px;" required><br>
+                <label style="font-size: larger; margin-top: 7px; font-family: sans-serif;" for="Password"><b>Password:</b></label><br>
+                <input type="password" id="Password" name="Password" style="margin-top:4px; margin-bottom:20px;" required><br>
+                <input type="checkbox" id="Check" name="Check" style="margin-top:6px; margin-bottom:20px;">
+                <label for="Check" style="margin-top:6px; font-family:sans-serif;">Remember me</label><br>
+                <input type="submit" style="margin-bottom:20px;"value="Login" required>
             </form>
         </div>
 
