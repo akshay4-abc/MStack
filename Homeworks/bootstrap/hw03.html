@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Progress Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Courses</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Web Development</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="display-5 text-center">Web Development Courses<small><span class="badge badge-primary" style="margin-left:5px;">NEW</span></small></h1>
+            </div>
+        </div>
+        <div class="row" style="margin-left:20px;">
+            <h2 > Course Progresses:</h2>
+        </div>
+        <div class="row" style="margin-left:20px;">
+            <div class="col-auto row align-items-center">
+                <h2><strong>HTML:</strong></h2>
+            </div>
+            <div class="col-md-9">
+                <div class="progress" style="margin-top:10px; height:30px;">
+                        <div class="progress-bar progress-bar-striped bg-success" style="width:100%;">100%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left:20px;">
+            <div class="col-auto row align-items-center">
+                <h2><strong>CSS:</strong></h2>
+            </div>
+            <div class="col-md-9">
+                <div class="progress" style="margin-top:10px; height:30px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:75%;">75%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left:20px;">
+            <div class="col-auto row align-items-center">
+                <h2><strong>JavaScript:</strong></h2>
+            </div>
+            <div class="col-md-9">
+                <div class="progress" style="margin-top:10px; height:30px;">
+                        <div class="progress-bar" style="width:50%; background-color:Orange;">50%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left:20px;">
+            <div class="col-auto row align-items-center">
+                <h2><strong>Bootstrap:</strong></h2>
+            </div>
+            <div class="col-md-9">
+                <div class="progress" style="margin-top:10px; height:30px;">
+                        <div class="progress-bar bg-danger" style="width:25%;">25%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-left:20px; margin-top:40px;">
+            <div class="col-md-12 d-flex justify-content-center">
+                <button type = "button" class = "btn btn-success" style="margin-right:10px;">START</button>
+                <button type = "button" class = "btn btn-outline-primary" style="margin-right:10px;">PAUSE</button>
+                <button type="button" class="btn btn-info" disabled>RESET</button>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top:240px;">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <ul class="pagination" style="margin-top:10px;">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+</body>
+</html>

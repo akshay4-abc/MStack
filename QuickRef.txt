@@ -1,0 +1,8 @@
+Quick reference Bootstrap
+-------------------------------------------------------------------------------
+Goal	Bootstrap Class
+Center text	       		 text-center
+Center horizontally		d-flex justify-content-center
+Center vertically		d-flex align-items-center
+Center both			d-flex justify-content-center align-items-center
+Stack items vertically		flex-column
