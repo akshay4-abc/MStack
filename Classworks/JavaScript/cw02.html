@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Library System</h2>
+<p id="summary"></p>
+<script>
+    let book={name:'The Odessey',author:'Homer',year:'700 BC',
+        getSummary: function(){ return ("The book '" + this.name + "' was written by " + this.author + ' in the year ' + this.year+'.')}
+    }
+    book.getSummary();
+
+    function printBookSummary(bookObj) {
+    document.getElementById("summary").innerHTML = bookObj.getSummary();
+    }
+
+    printBookSummary(book);
+</script>
+</body>
+</html>
