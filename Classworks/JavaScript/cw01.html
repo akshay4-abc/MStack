@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Time</title>
+  </head>
+  <body>
+    <h1>Sales Record</h1>
+    <p id="total"></p>
+    <p id="again"></p>
+    <script>
+      var tShirt = 400;
+      var tSold = 5;
+      var cap = 150;
+      var cSold = 3;
+      var sum = (tShirt * tSold) + (cap * cSold);
+      document.getElementById("total").innerHTML = "Total Sales = " + sum;
+      tShirt=450;
+      var sum = (tShirt * tSold) + (cap * cSold);
+      document.getElementById("again").innerHTML=("Updated total= ")+ sum;
+    </script>
+  </body>
+</html>
