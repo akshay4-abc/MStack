@@ -1,4 +1,6 @@
 {
 "liveServer.settings.CustomBrowser":
-"msedge"
+"msedge",
+"workbench.activityBar.compact": false,
+"workbench.activityBar.location": "default"
 }

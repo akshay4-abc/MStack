@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Feedback Editor</h1>
+
+<p id="feed"></p>
+<p id="pos"></p>
+<p id="array"></p>
+<script>
+var feedback = "   I loved the FOOD and the service!   ";
+var feedback= feedback.trim();
+var feedback= feedback.toLowerCase();
+var feedback=feedback.replace('food','ambience');
+var posi=feedback.indexOf("service");
+var arr= feedback.split(" ");
+var txt=" ";
+var i;
+for(i=0;i<arr.length;i++)
+    {
+      txt += arr[i] + "<br>";
+    }
+
+
+
+document.getElementById("feed").innerHTML =feedback;
+document.getElementById('pos').innerHTML ="The position of service is " + posi+".";
+document.getElementById("array").innerHTML =txt;
+</script>
+
+</body>
+</html>
