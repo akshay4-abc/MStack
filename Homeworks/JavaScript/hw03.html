@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Help tool</h1>
+
+<script>
+let userProfile={username:"CoolUser99", bio:" I LOVE coding! JavaScript is Great!!! "};
+function cleanUserBio(profile){
+    let username=profile.username.trim().toLowerCase();
+    let bio=profile.bio.trim().toLowerCase();
+    bio=bio.replace("JavaScript","JS");
+    var bioLength=bio.length;
+    return {
+        username: username,
+        bio: bio,
+        bioLength: bioLength
+    };
+
+}
+var result = cleanUserBio(userProfile);
+
+console.log(result);
+</script>
+
+</body>
+</html>
