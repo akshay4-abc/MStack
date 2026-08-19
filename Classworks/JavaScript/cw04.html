@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Statistics Widget</h2>
+<p id="result"></p>
+
+<script>
+    let randomNum = Math.floor(Math.random() * 100) + 1;
+    let userScore = "75";
+    let score = Number(userScore);
+    let difference = randomNum - score;
+    let squareRoot = Math.round(Math.sqrt(score));
+    let pi = Math.PI;
+    let result50 = "50" * 2;
+
+    document.getElementById("result").innerHTML =
+        "Random Number: " + randomNum + "<br>" +
+        "User Score: " + score + "<br>" +
+        "Difference: " + difference + "<br>" +
+        "Rounded Square Root: " + squareRoot + "<br>" +
+        "Pi: " + pi + "<br>" +
+        '"50" * 2 = ' + result50;
+</script>
+
+</body>
+</html>
