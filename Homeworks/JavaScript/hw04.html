@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Mystery Game</h2>
+<p id="result"></p>
+
+<script>
+    let mysteryLevel = Math.floor(Math.random() * 50 + 1);
+    let userScore = "45";
+    let score = Number(userScore);
+    let absdifference = Math.abs(mysteryLevel - score);
+    let squareRoot =Math.round(Math.sqrt(score));
+    let pi = Math.PI;
+    let result1 = "20" * 5;
+
+    let highest = Math.max(10, 20, mysteryLevel);
+    let lowest = Math.min(10, 20, mysteryLevel);
+
+    console.log("Square Root: " + squareRoot);
+    console.log("Pi: " + pi);
+    console.log('"20" * 5 = ' + result1);
+
+    document.getElementById("result").innerHTML =
+        "Mystery Level: " + mysteryLevel + "<br>" +
+        "User Score: " + score + "<br>" +
+        "Absolute Difference: " + absdifference + "<br>" +
+        "Highest Value: " + highest + "<br>" +
+        "Lowest Value: " + lowest;
+</script>
+
+</body>
+</html>
