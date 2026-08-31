@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote Generator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .card {
+            background-color: white;
+            width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        #quote {
+            font-size: 20px;
+            color: darkgrey;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Quote of the moment</h2>
+
+        <p id="quote">Click the button to get a quote.</p>
+
+        <button onclick="Quotes()">New Quote</button>
+    </div>
+
+    <script>
+        let quotes = [
+            "Believe in yourself.",
+            "Never give up.",
+            "Dream big and work hard.",
+            "Every day is a new beginning.",
+            "Success comes from hard work.",
+            "Stay positive and keep moving forward."
+        ];
+        
+        function Quotes() {
+            let index = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").innerHTML = quotes[index];
+        }
+        
+    </script>
+
+</body>
+</html>

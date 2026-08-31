@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Online Store</h2>
+<p id="result"></p>
+<button onclick="delivery()">Click Here</button>
+<script>
+    let order={itemName:'Bomb',isDelivered:true,daysSinceDelivered:10};
+    function delivery(){
+        let del=(order.isDelivered && order.daysSinceDelivered <=7)? "Eligible for return":"Return period expired";
+        document.getElementById("result").innerHTML=del;
+        console.log('itemName' in order);
+        delete order.daysSinceDelivered;
+        console.log(order);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Profile Page</h2>
+<p id="result"></p>
+<button onclick="check()">VERIFY NOW</button>
+<script>
+    let user={name:'Kevin',age :18, admin: true};
+    function check(){
+        let del=(user.age <=18 && user.admin)? "Access Granted":"Access Denied";
+        document.getElementById("result").innerHTML=del;
+        console.log('age' in user);
+        delete user.age;
+        console.log(user);
+    }
+</script>
+
+</body>
+</html>
