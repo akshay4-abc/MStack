@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Result Dashboard</h2>
+
+<script>
+
+let students = [
+    {name: "Arun", score: 75},
+    {name: "Meera", score: 45},
+    {name: "Rahul", score: 92},
+    {name: "Anu", score: 30},
+    {name: "Vishnu", score: 65}
+];
+
+let names = students.map(student => student.name);
+
+document.write("<h3>All Student Names</h3>");
+document.write(names.join("<br>"));
+
+let above60 = students
+    .filter(student => student.score > 60)
+    .map(student => student.name);
+
+document.write("<h3>Students Scoring More Than 60</h3>");
+document.write(above60.join("<br>"));
+
+let totalScore = students.reduce((total, student) => total + student.score, 0);
+
+document.write("<h3>Total Score</h3>");
+document.write(totalScore);
+let allPassed = students.every(student => student.score > 35);
+
+document.write("<h3>All Students Passed?</h3>");
+document.write(allPassed);
+let highScore = students.some(student => student.score > 90);
+
+document.write("<h3>At Least One Scored More Than 90?</h3>");
+document.write(highScore);
+students.sort((a, b) => b.score - a.score);
+
+document.write("<h3>Students Sorted by Score</h3>");
+
+students.forEach(student => {
+    document.write(student.name + " - " + student.score + "<br>");
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Product Listing</h2>
+
+<script>
+
+let products = ["Apple", "Banana", "Mango", "Orange"];
+let prices = [50, 30, 70, 40];
+
+let mix= [];
+
+for (let i = 0; i < products.length; i++) {
+    mix.push("Product: " + products[i] + " - Price: " + prices[i]);
+}
+
+document.write("<h3>All Products</h3>");
+
+for (let i = 0; i < mix.length; i++) {
+    document.write(mix[i] + "<br>");
+}
+
+document.write("<h3>Products with Price Greater Than 50</h3>");
+
+for (let i = 0; i < prices.length; i++) {
+    if (prices[i] > 50) {
+        document.write(mix[i] + "<br>");
+    }
+}
+
+products.push("Watermelon");
+prices.push(80);
+
+mix.push("Product: Watermelon - Price: 80");
+
+document.write("<h3>Updated Product List</h3>");
+
+for (let i = 0; i < mix.length; i++) {
+    document.write(mix[i] + "<br>");
+}
+
+</script>
+
+</body>
+</html>

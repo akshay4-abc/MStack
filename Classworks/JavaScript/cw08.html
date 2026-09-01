@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Grocery</h2>
+
+<script>
+    let apple = 30;
+    let banana = 10;
+    let mango = 50;
+
+    for (let i = 1; i <= 5; i++) 
+    {
+        let x = parseInt(prompt("Enter product code 1-3 :"));
+        let quantity = parseInt(prompt("Enter quantity:"));
+        let total;
+
+        switch (x) 
+        {
+            case 1:
+                total = apple * quantity;
+                document.write("Product is Apple. ");
+                break;
+
+            case 2:
+                total = banana * quantity;
+                document.write("Product is Banana. ");
+                break;
+
+            case 3:
+                total = mango * quantity;
+                document.write("Product is Mango. ");
+                break;
+
+            default:
+                document.write(" Invalid ");
+                continue;
+        }
+
+        document.write("Total price: ₹" + total+"<br>");
+
+        if (total > 100) {
+            document.write("(High purchase)<br><br>");
+        } else {
+            document.write("(Normal purchase)<br><br>");
+        }
+    }
+</script>
+
+</body>
+</html>

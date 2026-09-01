@@ -1,0 +1,64 @@
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Number Guessing Game</h2>
+
+<script>
+
+let chances = 0;
+let guessed = false;
+
+for (let i = 1; chances < 5; i++) 
+{
+
+    let no = parseInt(prompt("Enter a number between 1 and 5:"));
+
+    if (no < 1 || no > 5) {
+        document.write("Invalid input<br>");
+        continue;
+    }
+
+    chances++;
+
+    switch (no) {
+        case 1:
+            document.write("You entered: One<br>");
+            break;
+
+        case 2:
+            document.write("You entered: Two<br>");
+            break;
+
+        case 3:
+            document.write("You entered: Three<br>");
+            break;
+
+        case 4:
+            document.write("You entered: Four<br>");
+            break;
+
+        case 5:
+            document.write("You entered: Five<br>");
+            break;
+    }
+
+    if (no == 3) {
+        document.write("You guessed it right!<br>");
+        guessed = true;
+        break;
+    } else {
+        document.write("Wrong guess. Try again.<br><br>");
+    }
+}
+
+if (guessed == false) {
+    document.write("Game over");
+}
+
+</script>
+
+</body>
+</html>
+```
