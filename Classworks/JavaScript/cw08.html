@@ -2,20 +2,20 @@
 <html>
 <body>
 
-<h2>Grocery</h2>
+<h2>GroceryOnline</h2>
 
 <script>
     let apple = 30;
     let banana = 10;
     let mango = 50;
+    let n=5;
 
-    for (let i = 1; i <= 5; i++) 
+    for (let i = 1; i <=n; i++)
     {
         let x = parseInt(prompt("Enter product code 1-3 :"));
         let quantity = parseInt(prompt("Enter quantity:"));
         let total;
-
-        switch (x) 
+        switch (x)
         {
             case 1:
                 total = apple * quantity;
@@ -33,11 +33,12 @@
                 break;
 
             default:
-                document.write(" Invalid ");
+                document.write("Invalid<br><br>");
+                n++;
                 continue;
         }
 
-        document.write("Total price: ₹" + total+"<br>");
+        document.write("Total price: ₹" + total + "<br>");
 
         if (total > 100) {
             document.write("(High purchase)<br><br>");
