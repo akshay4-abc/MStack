@@ -1,19 +1,42 @@
-
 <!DOCTYPE html>
 <html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
 <body>
 
-<h2>Finding HTML Elements by Tag Name</h2>
+<p><button onclick="myMove()">Click Me</button></p> 
 
-
-<p>This Example demonstrates the <b>getElementsByTagName</b> method.</p>
-
-<p id="demo"></p>
+<div id ="container">
+  <div id ="animate"></div>
+</div>
 
 <script>
-var x = document.getElementsByTagName("p");
-document.getElementById("demo").innerHTML = 
-'The text in first paragraph (index 0) is: ' + x[0].innerHTML;
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 1);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
 </script>
 
 </body>
