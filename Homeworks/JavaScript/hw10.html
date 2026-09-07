@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON thank</title>
+</head>
+
+<body>
+
+    <h2>JSON feedback</h2>
+    <script>
+        let jsonData = '{"name":"Akshay","email":"akshay@gmail.com","feedback":"Thank you for the great service!"}';
+
+        try {
+            let feedbackData = JSON.parse(jsonData);
+
+            let checkFeedback = () => {
+                if (/thank/i.test(feedbackData.feedback)) {
+                    document.write("Positive feedback received");
+                } else {
+                    document.write("Feedback noted");
+                }
+            };
+
+            checkFeedback();
+        }
+        catch (error) {
+            document.write("Error: Invalid JSON");
+        }
+    </script>
+
+</body>
+</html>

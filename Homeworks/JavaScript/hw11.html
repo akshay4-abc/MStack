@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UserInfo</title>
+</head>
+
+<body>
+
+    <h2>UserSystem</h2>
+
+    <script>
+
+        class User {
+
+            constructor(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+            }
+
+            get userName() {
+                return this.name;
+            }
+
+            get userAge() {
+                return this.age;
+            }
+
+            get userEmail() {
+                return this.email;
+            }
+
+            set userEmail(email) {
+                if (email.includes("@")) {
+                    this.email = email;
+                }
+            }
+        }
+
+        let user1 = new User("Akshay", 23, "akshays1616@gmail.com");
+
+        user1.userEmail = "akshay123";
+        user1.userEmail = "akshay123@gmail.com";
+
+        document.write("Name: " + user1.userName + "<br>");
+        document.write("Age: " + user1.userAge + "<br>");
+        document.write("Email: " + user1.userEmail);
+
+    </script>
+
+</body>
+</html>

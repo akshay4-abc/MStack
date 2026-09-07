@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON</title>
+</head>
+
+<body>
+
+    <h2>JSON info</h2>
+
+    <p id="result"></p>
+
+    <script>
+        let jsonData = '{"name":"Akshay","email":"akshay@gmail.com","message":"Hello"}';
+
+        let user;
+
+        try {
+            user = JSON.parse(jsonData);
+
+            let printMessage = () => {
+                document.write("Message received from " + user.name);
+            };
+
+            printMessage();
+        }
+        catch (error) {
+            document.write("Error: Invalid JSON data");
+        }
+    </script>
+
+</body>
+</html>

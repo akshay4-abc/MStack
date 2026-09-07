@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StoreInfo</title>
+</head>
+
+<body>
+
+    <h2>BookInfo</h2>
+
+    <script>
+
+        class Book {
+
+            constructor(title, author, price) {
+                this.title = title;
+                this.author = author;
+                this.price = price;
+            }
+
+            get bookTitle() {
+                return this.title;
+            }
+
+            get bookAuthor() {
+                return this.author;
+            }
+
+            set bookPrice(price) {
+                if (typeof price === "number" && price > 0) {
+                    this.price = price;
+                }
+            }
+        }
+
+        let book1 = new Book("Odyssey", "Homer", 900);
+
+        book1.bookPrice = "900";
+        book1.bookPrice = -1000;
+        book1.bookPrice = 450;
+
+        document.write("Title: " + book1.bookTitle + "<br>");
+        document.write("Author: " + book1.bookAuthor + "<br>");
+        document.write("Price: " + book1.price);
+
+    </script>
+
+</body>
+</html>
