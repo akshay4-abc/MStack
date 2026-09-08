@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <form id="myForm">
+
+        <input type="text" id="textBox" placeholder="Enter text">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+
+        let form = document.getElementById("myForm");
+        let textBox = document.getElementById("textBox");
+        let result = document.getElementById("result");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            result.innerHTML = textBox.value;
+            result.style.color = "blue";
+
+        });
+
+        result.addEventListener("mouseover", function() {
+
+            result.style.color = "green";
+
+        });
+
+        result.addEventListener("mouseout", function() {
+
+            result.style.color = "blue";
+
+        });
+
+    </script>
+
+</body>
+</html>

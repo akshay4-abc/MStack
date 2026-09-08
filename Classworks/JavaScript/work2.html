@@ -5,13 +5,29 @@
   width: 400px;
   height: 400px;
   position: relative;
-  background: yellow;
+  background: pink;
 }
 #animate {
   width: 50px;
   height: 50px;
   position: absolute;
-  background-color: red;
+  background-color: yellow;
+}
+#animate1{
+    width: 50px;
+    height:50px;
+    position:absolute;
+    background-color: bisque;
+    top:0px;
+    left:350px;
+}
+#animate2{
+    width: 50px;
+    height:50px;
+    position:absolute;
+    background-color: red;
+    top:0px;
+    
 }
 </style>
 <body>
@@ -20,22 +36,42 @@
 
 <div id ="container">
   <div id ="animate"></div>
+  <div id="animate1"></div>
+  <div id="animate2"></div>
 </div>
 
 <script>
 function myMove() {
-  var elem = document.getElementById("animate");   
-  var pos = 0;
-  var id = setInterval(frame, 1);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.top = pos + "px"; 
-      elem.style.left = pos + "px"; 
+
+    var elem = document.getElementById("animate");
+    var elem1 = document.getElementById("animate1");
+    var elem2 = document.getElementById("animate2");
+
+    var pos = 0;
+    var pos1 = 350;
+    var pos2 = 175;
+
+    var id = setInterval(frame, 5);
+
+    function frame() {
+
+        if (pos == 350) {
+            clearInterval(id);
+        } else {
+
+            pos++;
+            pos1--;
+
+            elem.style.top = pos + "px";
+            elem.style.left = pos + "px";
+
+            elem1.style.top = pos + "px";
+            elem1.style.left = pos1 + "px";
+
+            elem2.style.top = pos + "px";
+            elem2.style.left = pos2 + "px";
+        }
     }
-  }
 }
 </script>
 
