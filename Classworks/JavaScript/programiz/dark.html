@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkMode</title>
+</head>
+<style>
+    body{
+        background-color:pink;
+        color:black;
+        text-align:center;
+        padding-top:300px;
+        font-size:xx-large;
+        font-weight:bolder;
+    }
+    .darkmode{
+        background-color:black;
+        color:pink;
+
+    }
+    
+</style>
+<body>
+    <h1 id="text">ABRACADABRA</h1>
+
+    <button id="button">Darkifyyy.</button>
+
+    <script>
+
+        let button = document.getElementById("button");
+
+        button.addEventListener("click", function() {
+
+            document.body.classList.toggle("darkmode");
+
+        });
+
+    </script>
+
+</body>
+</html>

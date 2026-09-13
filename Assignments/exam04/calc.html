@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-color: #eef2f7;
+        }
+
+        .calculator {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .title {
+            color: #1f2937;
+            font-weight: bold;
+        }
+
+        label {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .form-control {
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+        }
+
+        .btn-calculate {
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-calculate:hover {
+            background-color: #1d4ed8;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="calculator">
+            <div class="row mb-4">
+                <div class="col-md-12 text-center">
+                    <h1 class="display-4 title">CALCULATOR</h1>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <label for="num">First Number</label>
+
+                <div class="col-md-8 mx-auto">
+                    <input type="text" class="form-control"  placeholder="1st Operand" id="num" name="num">
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <label for="num1">Second Number</label>
+
+                <div class="col-md-8 mx-auto">
+                    <input type="text" class="form-control" placeholder="2nd Operand" id="num1" name="num1">
+                </div>
+            </div>
+           <div class ="dropdown text-center">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Operators</button>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" id="sum">+ Addition</a>
+                <a class="dropdown-item" href="#" id="sub">- Subtraction</a>
+                <a class="dropdown-item" href="#" id="div">/ Division</a>
+                <a class="dropdown-item" href="#" id="mul">* Multiplication</a>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-calculate bg-primary px-5">=</button>
+            </div>
+            <div class="form-group text-center mt-3">
+                <label for="res">Result</label>
+
+                <div class="col-md-8 mx-auto">
+                    <input type="text" class="form-control" placeholder="Output" id="res" name="res">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        let operator = " ";
+
+        document.getElementById("sum").onclick = function() {
+            operator = "+";
+        };
+
+        document.getElementById("sub").onclick = function() {
+            operator = "-";
+        };
+
+        document.getElementById("div").onclick = function() {
+            operator = "/";
+        };
+
+        document.getElementById("mul").onclick = function() {
+            operator = "*";
+        };
+
+        document.querySelector(".btn-calculate").onclick = function() {
+
+            let num = Number(document.getElementById("num").value);
+            let num1 = Number(document.getElementById("num1").value);
+            let result;
+
+            if (operator == "+") {
+                result = num + num1;
+            }
+            else if (operator == "-") {
+                result = num - num1;
+            }
+            else if (operator == "/") {
+                result = num / num1;
+            }
+            else if (operator == "*") {
+                result = num * num1;
+            }
+            else {
+                result = "Select an operator";
+            }
+
+            document.getElementById("res").value = result;
+        };
+        
+    </script>
+
+</body>
+</html>
+

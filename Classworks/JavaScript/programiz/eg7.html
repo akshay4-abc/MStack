@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><b>Converting Km to miles.</b></h1>
+    <p id="ree"></p>
+    <script>
+        let Kilo=parseInt(prompt("Enter Kilometers:"));
+        
+        let factor=0.621371
+        let miles=factor*Kilo;
+        document.getElementById("ree").innerHTML="Conversion is: "+miles;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Variables</title>
+</head>
+
+<body>
+    <h2>Swap 2 variables</h2>
+    <p> Click the button to swap the value.</p>
+    <button  onclick="onSwap()">Swap it</button>
+    <Script>
+        let x=parseInt(prompt("Enter the value of x: "));
+        let y=parseInt(prompt("Enter the value of y: "));
+        let temp;
+        function onSwap()
+        {
+            temp=x;
+            x=y;
+            y=temp;
+            document.write("The value after swapping, x is "+x+" and y is "+y)
+        }
+        
+    </Script>
+</body>
+</html>
