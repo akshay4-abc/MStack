@@ -100,8 +100,7 @@
                 <label for="res">Result</label>
 
                 <div class="col-md-8 mx-auto">
-                    <input type="text" class="form-control"
-                           placeholder="Output" id="res" name="res">
+                    <p id="res"></p>
                 </div>
             </div>
 
@@ -161,8 +160,12 @@
             else if (operator == "/") {
                 result = div(num, num1);
             }
-
-            document.getElementById("res").value = result.toFixed(2);
+            if(typeof result=="number"){
+                document.getElementById("res").innerHTML = result.toFixed(2);
+            }
+            else if(typeof result=="string"){
+                document.getElementById("res").innerHTML = result;
+            }
         };
 
     </script>
