@@ -57,94 +57,115 @@
     <div class="container">
 
         <div class="calculator">
+
             <div class="row mb-4">
                 <div class="col-md-12 text-center">
                     <h1 class="display-4 title">CALCULATOR</h1>
                 </div>
             </div>
+
             <div class="form-group text-center">
                 <label for="num">First Number</label>
 
                 <div class="col-md-8 mx-auto">
-                    <input type="text" class="form-control"  placeholder="1st Operand" id="num" name="num">
+                    <input type="text" class="form-control"
+                           placeholder="1st Operand" id="num" name="num">
                 </div>
             </div>
+
             <div class="form-group text-center">
                 <label for="num1">Second Number</label>
 
                 <div class="col-md-8 mx-auto">
-                    <input type="text" class="form-control" placeholder="2nd Operand" id="num1" name="num1">
+                    <input type="text" class="form-control"
+                           placeholder="2nd Operand" id="num1" name="num1">
                 </div>
             </div>
-           <div class ="dropdown text-center">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Operators</button>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="#" id="sum">+ Addition</a>
-                <a class="dropdown-item" href="#" id="sub">- Subtraction</a>
-                <a class="dropdown-item" href="#" id="div">/ Division</a>
-                <a class="dropdown-item" href="#" id="mul">* Multiplication</a>
-                </div>
+
+            <div class="text-center">
+                <select id="operator" class="form-control col-md-8 mx-auto">
+                    <option value=" ">Select Operator</option>
+                    <option value="+">Addition (+)</option>
+                    <option value="-">Subtraction (-)</option>
+                    <option value="*">Multiplication (*)</option>
+                    <option value="/">Division (/)</option>
+                </select>
             </div>
+
             <div class="text-center mt-4">
                 <button class="btn btn-calculate bg-primary px-5">=</button>
             </div>
+
             <div class="form-group text-center mt-3">
                 <label for="res">Result</label>
 
                 <div class="col-md-8 mx-auto">
-                    <input type="text" class="form-control" placeholder="Output" id="res" name="res">
+                    <input type="text" class="form-control"
+                           placeholder="Output" id="res" name="res">
                 </div>
             </div>
 
         </div>
 
     </div>
+
     <script>
-        let operator = " ";
 
-        document.getElementById("sum").onclick = function() {
-            operator = "+";
-        };
+        function sum(a, b) {
+            return a + b;
+        }
 
-        document.getElementById("sub").onclick = function() {
-            operator = "-";
-        };
+        function sub(a, b) {
+            return a - b;
+        }
 
-        document.getElementById("div").onclick = function() {
-            operator = "/";
-        };
+        function mul(a, b) {
+            return a * b;
+        }
 
-        document.getElementById("mul").onclick = function() {
-            operator = "*";
-        };
+        function div(a, b) {
+            return a / b;
+        }
 
         document.querySelector(".btn-calculate").onclick = function() {
 
-            let num = Number(document.getElementById("num").value);
-            let num1 = Number(document.getElementById("num1").value);
+            let num = parseFloat(document.getElementById("num").value);
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let operator = document.getElementById("operator").value;
             let result;
 
-            if (operator == "+") {
-                result = num + num1;
+            if (isNaN(num) || isNaN(num1)) {
+                result = "Please enter numbers";
             }
-            else if (operator == "-") {
-                result = num - num1;
-            }
-            else if (operator == "/") {
-                result = num / num1;
-            }
-            else if (operator == "*") {
-                result = num * num1;
-            }
-            else {
+
+            else if (operator == " ") {
                 result = "Select an operator";
             }
 
-            document.getElementById("res").value = result;
+            else if (operator == "/" && num1 == 0) {
+                result = "Number cant be divided by 0";
+            }
+
+            else if (operator == "+") {
+                result = sum(num, num1);
+            }
+
+            else if (operator == "-") {
+                result = sub(num, num1);
+            }
+
+            else if (operator == "*") {
+                result = mul(num, num1);
+            }
+
+            else if (operator == "/") {
+                result = div(num, num1);
+            }
+
+            document.getElementById("res").value = result.toFixed(2);
         };
-        
+
     </script>
 
 </body>
 </html>
-
